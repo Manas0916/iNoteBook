@@ -12,7 +12,7 @@ import PageNotFound from './components/PageNotFound';
 
 function App() {
 
-  
+
   const [alert, setalert] = useState(null);
   const showAlert = (message, type)=>{
     setalert({
@@ -29,7 +29,7 @@ function App() {
     <>
       <NoteState>
         <Router>
-          <Navbar />
+          <Navbar showAlert={showAlert}/>
           <Alert alert = {alert}/>
           <div className="container">
             <Routes>
